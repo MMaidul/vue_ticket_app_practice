@@ -9,17 +9,6 @@ body {
   line-height: 1.8;
 }
 
-header {
-  background-color: #1f2c46;
-  color: #41b883;
-  font-size: 22px;
-  padding: 22px;
-}
-
-header h2 {
-  text-align: center;
-}
-
 #app {
   padding: 11px;
   font-size: 14px;

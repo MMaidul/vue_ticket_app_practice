@@ -8,9 +8,7 @@
     <script src="vue.global.js"></script>
   </head>
   <body>
-    <header>
-      <h2>Vue JS 3 Bangla Tutorial</h2>
-    </header>
+    <header></header>
 
     <div id="app">
       <h1 class="app-title">Ticket booking app {{ name }}</h1>
@@ -26,7 +24,32 @@
             </div>
           </div>
         </div>
-        <div class="ticket-app__bottom"></div>
+        <div class="ticket-app__bottom">
+          <div class="ticket-app__left">
+            <div class="bus">
+              <div class="bus__top">
+                <div class="bus__door">Door</div>
+                <div class="bus__driver">Driver</div>
+              </div>
+              <div class="seats">
+                <div
+                  class="seat"
+                  :class="{
+                  'seat--sold': seat.type === 'sold',
+                  'seat--booked': seat.type === 'booked',
+                  'seat--selected': seat.type === 'selected'
+                   }"
+                  v-for="(seat, i) in seats"
+                  :key="seat.name"
+                  @click="handleClick(i)"
+                >
+                  {{seat.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-app__right"></div>
+        </div>
       </div>
     </div>
 
