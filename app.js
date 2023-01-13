@@ -146,9 +146,15 @@ const app = Vue.createApp({
   computed: {},
   methods: {
     handleClick(i) {
-      let clickedSeats = this.seats[i]
-      clickedSeats.type = 'selected'
-      console.log(clickedSeats)
+      let clickedSeat = this.seats[i]
+
+      if (clickedSeat.type === 'sold' || clickedSeat.type === 'booked') {
+        alert('You can not select this seat')
+        return
+      }
+      clickedSeat.type =
+        clickedSeat.type === 'selected' ? 'available' : 'selected'
+      console.log(clickedSeat)
     },
   },
   watch: {},
