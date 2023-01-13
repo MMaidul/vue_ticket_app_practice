@@ -13,7 +13,21 @@
     </header>
 
     <div id="app">
-      <h1 class="app-title">Ticket booking app</h1>
+      <h1 class="app-title">Ticket booking app {{ name }}</h1>
+      <div class="ticket-app">
+        <div class="ticket-app__top">
+          <div class="seat-states">
+            <div class="seat-state" v-for="(value, key) in seatStates">
+              <div
+                class="seat-state__color"
+                :style="{backgroundColor: value.color}"
+              ></div>
+              <div class="seat-state__text">{{ value.text }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="ticket-app__bottom"></div>
+      </div>
     </div>
 
     <script src="app.js"></script>

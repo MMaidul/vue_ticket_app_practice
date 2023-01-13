@@ -46,7 +46,7 @@ button {
   border: 1px solid gray;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 3px 9px;
   margin: 5px;
 }
@@ -250,7 +250,7 @@ button.confirm {
   text-align: left;
 }
 
-.ticket-app input[type="text"] {
+.ticket-app input[type='text'] {
   /* width: 100%; */
   width: 46%;
   padding: 4px 9px;
